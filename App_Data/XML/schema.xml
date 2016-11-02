@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<Root>
+	<Table ID="vwpump$" DisplayName="Pump Log" DisableSupportingDocuments="true">
+    <Field Destination="WellID" DataType="int" Default="WellID" Required="True" />
+    <Field Destination="WellLabel" DataType="text" Length="10" Default="WellLabel" Required="True" />
+    <Field Destination="Category" DataType="text" Length="20" Default="Category" Required="True" />
+		<Field Destination="LogDate" DataType="date" Default="LogDate" Required="True" />
+		<Field Destination="LogValue" DataType="int" Default="LogValue" />
+		<Field Destination="Units" DataType="text" Length="50" Default="Units" />
+		<SQL InsertQuery="sp_ImportLogData" CommandType="StoredProcedure" />
+	</Table>
+
+  <Table ID="vwtide$" DisplayName="Tidal Prediction" DisableSupportingDocuments="true">
+    <Field Destination="DateTime" DataType="datetime" Default="DateTime" Required="True" />
+    <Field Destination="Height" DataType="float" Default="Height" Required="True" />
+    <SQL InsertQuery="sp_ImportTideData" CommandType="StoredProcedure" />
+  </Table>
+</Root>

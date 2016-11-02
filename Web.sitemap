@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~/index.aspx" title="Home" description="">
+    <siteMapNode url="~/upload.aspx" title="Upload Data" description="" />
+    <siteMapNode url="~/uploadfiles.aspx" title="Upload Files" description="" />
+    <siteMapNode url="~/reviewdata.aspx" title="Review Data" description="" />
+    <siteMapNode url="~/reviewfiles.aspx" title="Review Files" description="" />
+    <siteMapNode url="~/ChartInput.aspx" title="Chart Input" description="Input parameters for Analytical Chart">
+      <siteMapNode url="~/AnalyticalCharts.aspx" title="Chart Output" description="Analytical Chart output" />
+    </siteMapNode>
+    <siteMapNode url="~/feedback.aspx" title="Feedback" description="" />
+    <siteMapNode url="~/preferences.aspx" title="Preferences" description="" />
+    <siteMapNode url="~/logviewer.aspx" title="Application Log" description="" />
+    <siteMapNode url="~/users.aspx" title="Users" description="" />
+  </siteMapNode>
+</siteMap>

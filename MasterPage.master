@@ -1,0 +1,93 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage_master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+	<title>Untitled Page</title>
+
+<script type='text/javascript'>
+	<!--
+	function selrange(element, start, length)
+	{
+		if(element.createTextRange)
+		{
+			var oRange = element.createTextRange();
+			oRange.moveStart('character', start);
+			oRange.moveEnd('character', length);
+			oRange.select();
+		}
+		else if(element.setSelectionRange)
+		{
+		    element.focus();
+			element.setSelectionRange(start, start + length);
+		}
+	};
+	//-->
+</script>
+	
+</head>
+<body>
+<form id="form1" runat="server">
+
+    <div class="top">
+        <div class="last_login">
+	        Last Login: <asp:Label ID="lblLastLogin" runat="server"></asp:Label>
+        </div>
+    </div>
+	<table cellspacing="0" cellpadding="8" width="100%">
+		<tr valign="top" style="
+	        background-color: #F5F5F5;
+		">
+			<td align="left" style="
+	            border-bottom: 1px solid silver;
+			">
+		        <asp:LoginName ID="LoginName1" runat="server" />&nbsp;
+			</td>
+			<td align="right" style="
+			    border-right: 1px solid silver;
+	            border-bottom: 1px solid silver;
+			">
+				<asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" | " PathDirection="CurrentToRoot">
+				</asp:SiteMapPath>
+				| <asp:LoginStatus ID="LoginStatus1" runat="server" />
+			</td>
+		</tr>
+    </table>
+    <table cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+			<td valign="top" class="Menu" height="400">
+			<%=WriteMenu() %>
+			</td>
+			<td valign="top" style="
+					background-color: #fff;
+					padding:8px 8px 8px 8px;">
+					
+				<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+				</asp:ContentPlaceHolder>
+
+			</td>
+		</tr>
+	</table>
+		
+    <div style="text-align:center;width:100%; color:#bbb">
+        <br />
+        Powered by IDEA<span class="sm">SM</span><br />
+        &copy; 2012 ARCADIS U.S., Inc.<br />
+        All Rights Reserved<br />
+        <br />
+    </div>
+
+</form>
+</body>
+	
+    <script language="javascript" type="text/javascript">
+        function displayPopup(url, height, width) {
+            properties = "toolbar=1,location=1,scrollbars=1,height=" + height;
+            properties = properties + ",width=" + width;
+            properties = properties + ",left=250,top=250";
+            popupHandle = open(url, "popup", properties);
+        }
+    </script>
+
+</html>

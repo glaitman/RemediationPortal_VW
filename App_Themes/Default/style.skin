@@ -1,0 +1,81 @@
+<%@ Register Assembly="SecureControls" Namespace="SecureControls" TagPrefix="lfr" %>
+
+<lfr:SecureGridView runat="server" CaptionAlign="Top" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%"
+    BorderColor="#B5C7DE" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" AllowPaging="true" AllowSorting="true"
+    PageSize="10" EmptyDataText="There are no data records to display.">
+    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+    <RowStyle BackColor="#EFF3FB" />
+    <EditRowStyle Font-Bold="True" />
+    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+    <PagerStyle BackColor="#507CD1" ForeColor="White" HorizontalAlign="Center" />
+    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Left"  />
+    <EmptyDataRowStyle BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="1px" 
+        ForeColor="White" BackColor="#507CD1" HorizontalAlign="Center" />
+    <AlternatingRowStyle BackColor="White" />
+</lfr:SecureGridView>
+
+<lfr:SecureGridView SkinID="File" runat="server" CellPadding="1" ForeColor="#333333" GridLines="None" Width="100%"
+    BorderColor="#B5C7DE" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" AllowPaging="true" AllowSorting="true"
+    PageSize="10" EmptyDataText="There are no data records to display.">
+    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" Height="20px" />
+    <RowStyle BackColor="#EFF3FB" CssClass="doc" />
+    <EditRowStyle Font-Bold="True" />
+    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+    <PagerStyle BackColor="#507CD1" ForeColor="White" HorizontalAlign="Center" />
+    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" Height="20px"  />
+    <EmptyDataRowStyle BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="1px" 
+        ForeColor="White" BackColor="#507CD1" HorizontalAlign="Center" Height="20px" />
+    <AlternatingRowStyle BackColor="White" CssClass="doc" />
+</lfr:SecureGridView>
+
+<lfr:SecureDetailsView runat="server" ForeColor="#333333" Width="100%"
+    BorderColor="#B5C7DE" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px">
+    <HeaderStyle BackColor="#dcdbd8" Height="21px" Font-Bold="True" ForeColor="#333333" Wrap="True" />
+    <FieldHeaderStyle Font-Bold="True" Width="160px" />
+    <RowStyle BackColor="White" Height="21px" />
+    <AlternatingRowStyle BackColor="#EFF3FB" />
+    <CommandRowStyle BackColor="#507CD1" Font-Bold="True" Height="21px" ForeColor="White" />
+    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+</lfr:SecureDetailsView>
+
+<asp:Calendar runat="server" BackColor="#f7f6f3" ForeColor="#333333" 
+        ShowGridLines="True"
+        DayNameFormat="Full" Font-Names="Tahoma" Font-Size="11px" >
+    <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
+    <SelectorStyle BackColor="#D1DDF1" />
+    <OtherMonthDayStyle ForeColor="#999999" BackColor="#ebebeb" />
+    <NextPrevStyle Font-Size="11px" ForeColor="#ffffff" />
+    <DayHeaderStyle BackColor="#D1DDF1" Font-Bold="True" />
+    <TitleStyle BackColor="#507CD1" Font-Bold="True" ForeColor="#ffffff" />
+    <WeekendDayStyle ForeColor="#999999"/>
+    <DayStyle HorizontalAlign="Left" VerticalAlign="Top" />
+</asp:Calendar>
+
+<asp:Login runat="server" BackColor="#EFF3FB" ForeColor="#333333" Width="320px"
+    BorderColor="#B5C7DE" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px"
+    Font-Names="Verdana,Arial" Font-Size="11px">
+    <TitleTextStyle BackColor="#507CD1" Height="20px" Font-Bold="True" Font-Size="12px" ForeColor="White" />
+    <TextBoxStyle Font-Names="Verdana,Arial" Font-Size="11px" Width="150px" />
+    <LoginButtonStyle Font-Names="Verdana,Arial" Font-Size="11px" />
+</asp:Login>
+
+<asp:TextBox SkinID="Search" runat="server" Style="vertical-align: middle" Font-Bold="True" BackColor="#EFF3FB" />
+
+<asp:Chart SkinID="Chart" runat="server" Width="1080px" Height="540px" BorderSkin-SkinStyle="Emboss" Palette="Bright"
+    ImageStorageMode="UseImageLocation" ImageLocation="~/TempImageFiles/ChartPic_#SEQ(300,5)" ImageType="Jpeg" SuppressExceptions="true">
+    <Series>
+    </Series>
+    <ChartAreas>
+        <asp:ChartArea>                                
+        </asp:ChartArea>
+    </ChartAreas>
+    <Legends>
+        <asp:Legend Enabled="true" LegendItemOrder="ReversedSeriesOrder" LegendStyle="Table" TableStyle="Tall" 
+            Font="Trebuchet MS, 9pt, style=Bold" IsTextAutoFit="false" Docking="Bottom" Alignment="Center" ItemColumnSpacing="100">
+        </asp:Legend>
+    </Legends>
+    <Titles>
+        <asp:Title Font="Trebuchet MS, 9pt, style=Bold" >                        
+        </asp:Title>
+    </Titles>
+</asp:Chart>
